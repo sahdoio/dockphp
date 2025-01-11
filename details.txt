@@ -1,0 +1,52 @@
+PHP Version:
+PHP 8.3.15 (cli) (built: Jan  8 2025 18:08:03) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.3.15, Copyright (c) Zend Technologies
+
+Installed Extensions:
+[PHP Modules]
+Core
+ctype
+curl
+date
+dom
+fileinfo
+filter
+hash
+iconv
+json
+libxml
+mbstring
+mysqlnd
+openssl
+pcre
+PDO
+pdo_sqlite
+Phar
+posix
+random
+readline
+Reflection
+session
+SimpleXML
+sodium
+SPL
+sqlite3
+standard
+tokenizer
+xml
+xmlreader
+xmlwriter
+zlib
+
+[Zend Modules]
+
+
+php.ini Location:
+Loaded Configuration File:         /usr/local/etc/php/php.ini
+
+Extracted php.ini Settings:
+- date.timezone:
+America/Sao_Paulo
+- memory_limit:
+512M

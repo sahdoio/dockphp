@@ -1,0 +1,14 @@
+services:
+  dockphp:
+    container_name: dockphp
+    image: "php:8.3-alpine"
+    volumes:
+      - "./src:/src"
+      - "./src/php.ini:/usr/local/etc/php/php.ini"
+    ports:
+      - "8080:80"
+    tty: true
+    command: "php -S 0.0.0.0:80 -t /src"
+    environment:
+      COMPANY_NAME: "NEXT-GEN PHP"
+      SERVICES: "CURSOS|MENTORIAS|TREINAMENTOS"
