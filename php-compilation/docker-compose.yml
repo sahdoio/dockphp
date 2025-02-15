@@ -1,0 +1,12 @@
+services:
+  my-php-compilation:
+    container_name: my-php-compilation
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-php-compilation
+    tty: true
+    ports:
+      - "8090:80"
+    volumes:
+      - .:/php

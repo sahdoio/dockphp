@@ -55,3 +55,60 @@ I fixed the error by changing the `index.php` file:
 The code now retrieves the correct value:'
 
 ![img_2.png](docs/img_2.png)
+
+# Compiling PHP
+
+## Setting Up a Project  
+Go to `./php-compilation` folder.
+
+Inside this folder we have a specific docker setup
+
+To run the project:
+```sh
+make up
+```
+
+Make up should download the php source from git, but for some reason I was not able to do that. So I had to do it manually.
+
+I think the RUN command that tries to download the source do not eep the files inside the container. This is probably a docker issue. But I'm sure this is possible to fix.
+
+So here it is the manual process:
+
+To get inside the container
+```sh
+make sh
+```
+After that download php from source:
+```sh
+git clone https://github.com/php/php-src.git
+```
+Exit the container
+```sh
+exit
+```
+Then, go to `./php-compilation/php-src` folder and compile PHP:
+```sh
+make compile
+```
+Then go back to the container
+```sh
+make sh
+```
+Go inside php cli folder
+```sh
+cd /php-src/sapi/cli
+```
+Check php version
+```sh
+./php -v
+```
+You will see something like this:
+![php_compilation_version.png](docs/php_compilation_version.png)
+
+For checking the pdo_sqlite version, exit the container and then you can run the following command:
+```sh
+make check-pdo-sqlite-version
+```
+The result will be something like this:
+![pdo_sqlite_version.png](docs/pdo_sqlite_version.png)
+
